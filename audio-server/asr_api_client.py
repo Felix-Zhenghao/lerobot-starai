@@ -15,6 +15,10 @@ from typing import Optional, Dict, Any
 from apis import (
     control_robot,
     replay,
+    hold_phone,
+)
+from lerobot.common.robot_devices.control_utils import (
+    go_to_rest_pos,
 )
 
 # Configure logging
@@ -127,10 +131,10 @@ def task_handler(task_data: Dict[str, Any], robot, cfg):
         replay(robot, cfg.control, path="data/napkin.pt")
         # Add your robot control code here
     elif task == "帮忙拿手机":
-        print("执行动作: 机器人去拿手机")
+        hold_phone(robot, cfg.control)
         # Add your robot control code here
     elif task == "松开并归还手机":
-        print("执行动作: 机器人松开手机")
+        go_to_rest_pos(robot)
         # Add your robot control code here
     elif task == "无":
         print("执行动作: 无相关任务")

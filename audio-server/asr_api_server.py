@@ -79,7 +79,7 @@ class ASRAPIService:
             
             # Kimi configuration
             kimi_config = KimiConfig(
-                api_key="sk-b4pdM1xHqOdY16GIWZxhKIFoR7zdJ3ob3QHo8MU88LY5ONFY",  # Replace with actual API key
+                api_key="HAHAHAHAHAAHHA",  # Replace with actual API key
                 base_url="https://api.moonshot.cn/v1",
                 model="moonshot-v1-8k",
                 temperature=0.3,

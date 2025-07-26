@@ -624,7 +624,7 @@ def main():
     )
     
     kimi_config = KimiConfig(
-        api_key="sk-b4pdM1xHqOdY16GIWZxhKIFoR7zdJ3ob3QHo8MU88LY5ONFY",
+        api_key="HAHAHAHAHAAHHA",
         base_url="https://api.moonshot.cn/v1",
         model="moonshot-v1-8k",
         temperature=0.3,

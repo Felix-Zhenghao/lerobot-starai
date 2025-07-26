@@ -171,16 +171,6 @@ def hold_phone(
 
         dt_s = time.perf_counter() - start_episode_t
         log_control_info(robot, dt_s, fps=cfg.fps)
-        
-    while True:
-        robot.send_action(last_action)
-
-    go_to_rest_pose(
-        robot=robot,
-    )
-
-    
-
 
 
 @parser.wrap()
@@ -190,19 +180,19 @@ def control_robot(cfg: ControlPipelineConfig):
 
     robot = make_robot_from_config(cfg.robot)
     
-    # return robot, cfg
-    import IPython; IPython.embed()
+    return robot, cfg
+    # import IPython; IPython.embed()
 
-    if isinstance(cfg.control, ReplayControlConfig):
-        replay(robot, cfg.control)
+    # if isinstance(cfg.control, ReplayControlConfig):
+    #     replay(robot, cfg.control)
         
-        cfg.control.repo_id = "Felix-Zhenghao/agreeBot"
-        # replay(robot, cfg.control)
+    #     cfg.control.repo_id = "Felix-Zhenghao/agreeBot"
+    #     # replay(robot, cfg.control)
 
-    if robot.is_connected:
-        # Disconnect manually to avoid a "Core dump" during process
-        # termination due to camera threads not properly exiting.
-        robot.disconnect()
+    # if robot.is_connected:
+    #     # Disconnect manually to avoid a "Core dump" during process
+    #     # termination due to camera threads not properly exiting.
+    #     robot.disconnect()
 
 
 def get_napkins():
