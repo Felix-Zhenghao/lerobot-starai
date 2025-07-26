@@ -1,8 +1,0 @@
-pyyaml
-openai
-requests
-dotenv
-numpy
-opencv-python
-opencv-contrib-python
-pillow
